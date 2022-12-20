@@ -4,7 +4,7 @@
 using static System.Console;
 Clear();
 
-WriteLine("Введите трехзнчное число - ");
+WriteLine("Введите трехзначное число - ");
 int number = Convert.ToInt32(ReadLine());
 int digit = number / 10;
 int digit2 = digit % 10;

@@ -4,10 +4,13 @@
 using static System.Console;
 Clear();
 
-WriteLine("Введите трехзначное число - ");
+WriteLine("Введите число - ");
 int number = Convert.ToInt32(ReadLine());
-int digit = number % 10;
-    
-WriteLine(Math.Abs(number) > 999 || Math.Abs(number) < 100?     
-     "Третьей цифры нет": $"{Math.Abs(digit)}");   
+int n = number;
 
+while (Math.Abs(n) > 999)
+{
+    n /= 10;
+}
+    
+WriteLine(Math.Abs(number) < 100? "Третьей цифры нет": $"{n % 10}");   
